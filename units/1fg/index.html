@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECT Final Grammar Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div id="user-info">
+        <h2>ELECT Final Grammar Section</h2>
+        <h3>Time: 30 minutes</h3>
+        <h2>Enter Your Information</h2>
+        <form id="info-form">
+            <label for="name">Name: <input type="text" id="name" style="margin-left: 51px;"> </label>
+            <br>
+            <label for="id">Badge: <input type="text" id="id" style="margin-left: 47px;" required></label>
+            <br>
+            <label for="password">Password: <input type="password" id="password" style="margin-left: 20px;" required></label>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="button" onclick="startQuiz()">Start Test</button>
+        </form>
+    </div>
+
+    <div id="quiz" style="display: none;">
+        <h2>ELECT Final Grammar Section</h2>
+        <div id="user-info-display"></div>
+        <p id="timer">Time left: <span id="countdown"></span></p>
+        <hr>
+        <form id="quiz-form">
+            <h3>Identify the choice that best completes the statement or answers the question.</h3>
+            <p class="warning" style="color: red;">Do not open new tabs or minimize the screen during the test. Test will terminate/freeze and your answers may not be saved. You may also get zero.</p>
+            <div class="question">
+                <p>1. Do you know where the employees ________ their breakfast?</p>
+                <label><input type="radio" name="q1" value="eating"> eating</label>
+                <label><input type="radio" name="q1" value="eat"> eat</label>
+                <label><input type="radio" name="q1" value="eats"> eats</label>
+                <label><input type="radio" name="q1" value="eaten"> eaten</label>
+            </div><br>
+
+            <div class="question">
+                <p>2. Aramco ITC trainees _______ always on time, they never miss classes.</p>
+                <label><input type="radio" name="q2" value="are"> are</label>
+                <label><input type="radio" name="q2" value="were"> were</label>
+                <label><input type="radio" name="q2" value="is"> is</label>
+                <label><input type="radio" name="q2" value="am"> am</label>
+            </div><br>
+
+            <!-- Add more questions here -->
+            <div class="question">
+                <p>3. October is the____________month to travel to European countries.</p>
+                <label><input type="radio" name="q3" value="good"> good</label>
+                <label><input type="radio" name="q3" value="better"> better</label>
+                <label><input type="radio" name="q3" value="best"> best</label>
+                <label><input type="radio" name="q3" value="expensive"> expensive</label>
+            </div><br>
+
+            <div class="question">
+                <p>4. The Saudi team is proud of winning. It is _______ accomplishment.</p>
+                <label><input type="radio" name="q4" value="there"> there</label>
+                <label><input type="radio" name="q4" value="their"> their</label>
+                <label><input type="radio" name="q4" value="they're"> they're</label>
+                <label><input type="radio" name="q4" value="them"> them</label>
+            </div><br>
+
+            <div class="question">
+                <p>5. That’s my office. I spend most of my time   _________.</p>
+                <label><input type="radio" name="q5" value="here"> here</label>
+                <label><input type="radio" name="q5" value="their"> their</label>
+                <label><input type="radio" name="q5" value="there"> there</label>
+                <label><input type="radio" name="q5" value="that"> that</label>
+            </div><br>
+
+            <div class="question">
+                <p>6. My classmate Maria can speak English very _________.</p>
+                <label><input type="radio" name="q6" value="good"> good</label>
+                <label><input type="radio" name="q6" value="well"> well</label>
+                <label><input type="radio" name="q6" value="nice"> nice</label>
+                <label><input type="radio" name="q6" value="best"> best</label>
+            </div><br>
+
+            <div class="question">
+                <p>7. They are a very wealthy family. They own a house, a farm ____ a car.</p>
+                <label><input type="radio" name="q7" value="and"> and</label>
+                <label><input type="radio" name="q7" value="but"> but</label>
+                <label><input type="radio" name="q7" value="or"> or</label>
+                <label><input type="radio" name="q7" value="so"> so</label>
+            </div><br>
+
+            <div class="question">
+                <p>8. Are you sure that you all understand ___________  lesson?</p>
+                <label><input type="radio" name="q8" value="a"> a</label>
+                <label><input type="radio" name="q8" value="an"> an</label>
+                <label><input type="radio" name="q8" value="the"> the</label>
+                <label><input type="radio" name="q8" value="at"> at</label>
+            </div><br>
+
+            <div class="question">
+                <p>9. Give me my phone please. It is ________ my bag.</p>
+                <label><input type="radio" name="q9" value="at"> at</label>
+                <label><input type="radio" name="q9" value="on"> on</label>
+                <label><input type="radio" name="q9" value="in"> in</label>
+                <label><input type="radio" name="q9" value="from"> from</label>
+            </div><br>
+
+            <div class="question">
+                <p>10. We work long hours, _____ we are happy to work in Aramco.</p>
+                <label><input type="radio" name="q10" value="and"> and</label>
+                <label><input type="radio" name="q10" value="but"> but</label>
+                <label><input type="radio" name="q10" value="or"> or</label>
+                <label><input type="radio" name="q10" value="so"> so</label>
+            </div><br>
+
+            <div class="question">
+                <p>11. I ______ at 6 A.M. yesterday to beat traffic and come to work early.</p>
+                <label><input type="radio" name="q11" value="woke up"> woke up</label>
+                <label><input type="radio" name="q11" value="wakes up"> wakes up</label>
+                <label><input type="radio" name="q11" value="wake up"> wake up</label>
+                <label><input type="radio" name="q11" value="wake"> wake</label>
+            </div><br>
+
+            <div class="question">
+                <p>12. I left the house________ I wanted to take a walk.</p>
+                <label><input type="radio" name="q12" value="before"> before</label>
+                <label><input type="radio" name="q12" value="because"> because</label>
+                <label><input type="radio" name="q12" value="after"> after</label>
+                <label><input type="radio" name="q12" value="if"> if</label>
+            </div><br>
+
+            <div class="question">
+                <p>13. ______ seeing the movie, I ordered dinner.</p>
+                <label><input type="radio" name="q13" value="If"> If</label>
+                <label><input type="radio" name="q13" value="Because"> Because</label>
+                <label><input type="radio" name="q13" value="After"> After</label>
+                <label><input type="radio" name="q13" value="When"> When</label>
+            </div><br>
+
+            <div class="question">
+                <p>14. He talked about his project ___________. He must be proud.</p>
+                <label><input type="radio" name="q14" value="passionate"> passionate</label>
+                <label><input type="radio" name="q14" value="passionately"> passionately</label>
+                <label><input type="radio" name="q14" value="passionous"> passionous</label>
+                <label><input type="radio" name="q14" value="passion"> passion</label>
+            </div><br>
+
+            <div class="question">
+                <p>15. Are you _________________ your car regularly? It is very important for your safety.</p>
+                <label><input type="radio" name="q15" value="checking"> checking</label>
+                <label><input type="radio" name="q15" value="check"> check</label>
+                <label><input type="radio" name="q15" value="checked"> checked</label>
+                <label><input type="radio" name="q15" value="checks"> checks</label>
+            </div><br>
+
+            <div class="question">
+                <p>16. Look! They are__________. They just passed a red light!</p>
+                <label><input type="radio" name="q16" value="speed"> speed</label>
+                <label><input type="radio" name="q16" value="speeded"> speeded</label>
+                <label><input type="radio" name="q16" value="speeding"> speeding</label>
+                <label><input type="radio" name="q16" value="speeds"> speeds</label>
+            </div><br>
+
+            <div class="question">
+                <p>17. I like tea, _____my brother doesn’t. He likes coffee.</p>
+                <label><input type="radio" name="q17" value="and"> and</label>
+                <label><input type="radio" name="q17" value="but"> but</label>
+                <label><input type="radio" name="q17" value="or"> or</label>
+                <label><input type="radio" name="q17" value="so"> so</label>
+            </div><br>
+
+
+            <div class="question">
+                <p>18. I ______ like writing reports because it’s very tedious.</p>
+                <label><input type="radio" name="q18" value="will"> will</label>
+                <label><input type="radio" name="q18" value="can"> can</label>
+                <label><input type="radio" name="q18" value="don't"> don't</label>
+                <label><input type="radio" name="q18" value="isn't"> isn't</label>
+            </div><br>
+
+            <div class="question">
+                <p>19. Mazen is punctual. He always _________ to work early.</p>
+                <label><input type="radio" name="q19" value="comes"> comes</label>
+                <label><input type="radio" name="q19" value="coming"> coming</label>
+                <label><input type="radio" name="q19" value="comed"> comed</label>
+                <label><input type="radio" name="q19" value="come"> come</label>
+            </div><br>
+
+            <div class="question">
+                <p>20. ______we travel by car when we don’t find flight reservations.</p>
+                <label><input type="radio" name="q20" value="Always"> Always</label>
+                <label><input type="radio" name="q20" value="Sometimes"> Sometimes</label>
+                <label><input type="radio" name="q20" value="Never"> Never</label>
+                <label><input type="radio" name="q20" value="Seldom"> Seldom</label>
+            </div><br>
+
+            <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+    </div>
+
+    <div id="result" style="display: none;">
+        <h2>Final Score</h2>
+        <p id="score"></p>
+        <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <div id="close" style="display: none;">
+        <h3 style="text-indent: 20px;">The test has been closed due to minimized page, another opened tab or user submitted the test. If user submitted the test, the score should be shown.</h3>
+        <p id="score"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

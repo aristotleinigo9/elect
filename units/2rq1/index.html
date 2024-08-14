@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECT Reading Quiz 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div id="user-info">
+        <h2>ELECT Reading Quiz 1, Units 1B-2A</h2>
+        <h3>Time: 50 minutes</h3>
+        <h2>Enter Your Information</h2>
+        <form id="info-form">
+            <label for="name">Name: <input type="text" id="name" style="margin-left: 51px;"> </label>
+            <br>
+            <label for="id">Badge: <input type="text" id="id" style="margin-left: 47px;" required></label>
+            <br>
+            <label for="password">Password: <input type="password" id="password" style="margin-left: 20px;" required></label>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="button" onclick="startQuiz()">Start Quiz</button>
+        </form>
+    </div>
+
+    <div id="quiz" style="display: none;">
+        <h2>ELECT Reading Quiz 1, Units 1B-2A</h2>
+        <div id="user-info-display"></div>
+        <p id="timer">Time left: <span id="countdown"></span></p>
+        <hr>
+        <form id="quiz-form">
+            <h3>Read the following passage. Then answer the questions that followed.</h3>
+            <p class="warning" style="color: red;">Do not open new tabs or minimize the screen during the quiz. Quiz will terminate/freeze and your answers may not be saved. You may also get zero.</p>
+
+            <hr><h3 style = 'color:green; text-align: center; '>The Gold and Salt Trade</h3><hr>
+            <p style = 'text-align:justify'>
+                <table class="table-container">
+                    <tr>
+                        <th style="font-weight: normal;">A string of more than five hundred camels moves slowly through the constantly shifting dunes of the Sahara. The men leading it south do not find their way using landmarks in the never-ending sands. Instead, these men look to the stars and winds to guide their way, often journeying for months at a time. Traveling in the Sahara can be deadly. The summer heat can reach over 120 degrees Fahrenheit during the day and plummet to as low as 25 degrees at night. So what precious cargo do the camels carry that makes this risky journey worth it? Salt. Salt, the Stuff of Life For centuries, salt was worth its weight in gold in West Africa.</th>
+                       
+                        <th><img src='images/map.jpg' width='300' height='270'></th>
+                    </tr>
+                </table>
+            
+            <p style = 'text-align:justify'> 
+                All people require mineral salt in their diets to stay healthy, and salt has always been valued for flavoring and preserving food. Salt occurs naturally in some environments and foods. However, this was not the case in the savannah and forests of West Africa. In coastal regions, people could use salt from the ocean, but sea salt didn’t travel well. So, inland people needed a reliable source of the mineral. Trade Makes Empires West Africans in search of salt turned north.
+       
+            <p style = 'text-align:justify'>
+                The desolate Sahara held a deep and seemingly endless supply of salt beneath the desert sand. By about 700 CE, Berber traders from North Africa were crossing the Sahara to bring many commodities, including salt, south to the cities of West Africa. They understood West Africa's need for salt and demanded high prices for it. While West Africa was poor in salt, it was rich in gold. So, salt was often traded for gold pound for pound. Gold and salt were so closely linked that some West Africans even used salt as currency.
+        
+            <p style = 'text-align:justify'>
+                The salt trade supported the rise of three major empires over 1,300 years. These empires protected traders and profited by taxing them in return. The Empire of Ghana, not to be confused with the country that exists today, ruled from 300 to 1000 CE. It taxed the traders for both importing goods and exporting them. Later, the Kingdom of Mali, also not to be confused with the modern country, rose up around the trade city of Timbuktu. It ruled a large area of West Africa and traded from 1200 to 1450 CE. Finally, the largest trading empire, Songhai, reigned from about 1450 to 1600 CE. Its borders reached far north into the Sahara.
+            
+            <p style = 'text-align:justify'> 
+                Camels were the perfect work animal for the gold and salt trade. They can carry over 400 pounds comfortably. Not only that, camels can survive for weeks without water!
+            
+            <p style = 'text-align:justify'><br> 
+
+            <div style = 'text-align:center'><img src='images/camels.png' width='700' height='270' ></div>
+            <br>
+            <h4>Answer the following questions about “The Gold and Salt Trade”.</h4>
+            <div class="question">
+                1. Which of the following statements is the main idea of the text?</p>
+                <label><input type="radio" name="q1" value="a"> The Sahara can be dangerous to cross on foot.</label>
+                <label><input type="radio" name="q1" value="b"> Salt was highly valued in West Africa.</label>
+                <label><input type="radio" name="q1" value="c"> Humans require salt to stay healthy.</label>
+                <label><input type="radio" name="q1" value="d"> Camels are ideal for hauling goods across deserts.</label>
+            </div><br>
+
+            <div class="question">
+                <p>2. On of the reasons salt was important in West Africa is that it is:</p>
+                <label><input type="radio" name="q2" value="a"> heap</label>
+                <label><input type="radio" name="q2" value="b"> white</label>
+                <label><input type="radio" name="q2" value="c"> sweet</label>
+                <label><input type="radio" name="q2" value="d"> healthy</label>
+            </div><br>
+
+            <div class="question">
+                <p>3. What does the word: “currency” mean?</p>
+                <label><input type="radio" name="q3" value="a"> money</label>
+                <label><input type="radio" name="q3" value="b"> food</label>
+                <label><input type="radio" name="q3" value="c"> weapon</label>
+                <label><input type="radio" name="q3" value="d"> identification</label>
+            </div><br>
+
+            <div class="question">
+                <p>4. In this sentence: “It taxed the traders for both importing goods and exporting them”, the pronoun “it” refers to:</p>
+                <label><input type="radio" name="q4" value="a"> The trade city of Timbuktu.</label>
+                <label><input type="radio" name="q4" value="b"> The Songhai Empire.</label>
+                <label><input type="radio" name="q4" value="c"> The Kingdom of Mali.</label>
+                <label><input type="radio" name="q4" value="d"> The Empire of Ghana.</label>
+            </div><br>
+
+            <div class="question">
+                <p>5. Based on the context in paragraph 3, the word “commodities” means:</p>
+                <label><input type="radio" name="q5" value="a"> pack animals</label>
+                <label><input type="radio" name="q5" value="b"> caravans</label>
+                <label><input type="radio" name="q5" value="c"> trade goods</label>
+                <label><input type="radio" name="q5" value="d"> gold and silver</label>
+            </div><br>
+
+            <div class="question">
+                <p>6. The pronoun “they” in the conclusion refers to:</p>
+                <label><input type="radio" name="q6" value="a"> Camels</label>
+                <label><input type="radio" name="q6" value="b"> Salt</label>
+                <label><input type="radio" name="q6" value="c"> Traders</label>
+                <label><input type="radio" name="q6" value="d"> Ghana’s rulers</label>
+            </div><br>
+
+            <div class="question">
+               
+                7. Camels can carry over _________ pounds:</p>
+                <label><input type="radio" name="q7" value="a"> 400</label>
+                <label><input type="radio" name="q7" value="b"> 4000</label>
+                <label><input type="radio" name="q7" value="c"> 4400</label>
+                <label><input type="radio" name="q7" value="d"> 4440</label>
+            </div><br>
+
+
+            <div class="question">
+                <p>8. Which sentence does NOT have an opinion:</p>
+                <label><input type="radio" name="q8" value="a"> The Sahara Desert was scary, that’s why it is empty.</label>
+                <label><input type="radio" name="q8" value="b"> The summer heat can reach over 120 degrees Fahrenheit in the Sahara Desert.</label>
+                <label><input type="radio" name="q8" value="c"> It is silly to trade salt for gold.</label>
+                <label><input type="radio" name="q8" value="d"> It is horrible how they treated camels in the salt/gold trade.</label>
+            </div><br>
+            <hr>
+
+            <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+    </div>
+
+    <div id="result" style="display: none;">
+        <h2>Final Score</h2>
+        <p id="score"></p>
+        <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

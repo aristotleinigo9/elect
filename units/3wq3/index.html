@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECT Writing Quiz 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div id="user-info">
+        <h2>ELECT Writing Quiz 3</h2>
+        <h3>Time: 50 minutes</h3>
+        <h2>Enter Your Information</h2>
+        <form id="info-form">
+            <label for="name">Name: <input type="text" id="name" style="margin-left: 51px;"> </label>
+            <br>
+            <label for="id">Badge: <input type="text" id="id" style="margin-left: 47px;" required></label>
+            <br>
+            <label for="password">Password: <input type="password" id="password" style="margin-left: 20px;" required></label>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="button" onclick="startQuiz()">Start Quiz</button>
+        </form>
+    </div>
+
+    <div id="quiz" style="display: none;">
+        <h2>ELECT Writing Quiz 3</h2>
+        <div id="user-info-display"></div>
+        <p id="timer">Time left: <span id="countdown"></span></p>
+        <hr>
+
+        <form id="quiz-form">
+            <h3>Choose ONE of the following three choices below to write about. Use the paper provided by your teacher.</h3>
+            <p class="warning" style="color: red; font-size: larger;">Do not open new tabs or minimize the screen during the test. Test will terminate/freeze and you may get zero.</p><br>
+            <hr>
+            <div class="question">
+                <span style="font-size: 25px; color:green;">Choice 1</span><br>
+                <p style="font-style: italic; font-size: larger;"> 
+                    Write no less than ten sentences about two different cities in your country; COMPARE their location, major attractions, local food and culture. Finally, choose which one would you live in and why?
+                </p>
+                <!-- <ul style="font-style: italic; font-size: larger;">
+                    <li>Name and location of your hometown.</li>
+                    <li>What is it famous for?</li>
+                    <li>The weather.</li>
+                    <li>Traditional dish.</li>
+                    <li>What you love most about it. </li>
+                  </ul>  -->
+            </div><hr>
+
+
+            <div class="question">
+                <span style="font-size: 25px; color:green;">Choice 2</span><br>
+                <p style="font-style: italic; font-size: larger;"> 
+                    Write no less than ten sentences to discuss the qualities of a good manager? What qualities do you think they should have, and what characteristics should they avoid? Finally, what kind of manager would YOU be in the future?
+                </p>
+                <!-- <ul style="font-style: italic; font-size: larger;">
+                    <li>Where did you go?</li>
+                    <li>Who did you meet?</li>
+                    <li>What did you do?</li>
+                    <li>What did you eat?</li>
+                    <li>What was your favorite part of the weekend?</li>
+                  </ul>  -->
+            </div><hr>
+
+            <div class="question">
+                <span style="font-size: 25px; color:green;">Choice 3</span><br>
+                <p style="font-style: italic; font-size: larger;"> 
+                    Write no less than ten sentences to describe what you are doing in the IELP classroom? What activities are you doing, and what skills are you learning? Finally, what is your teacher doing to help you?
+                </p>
+                <!-- <ul style="font-style: italic; font-size: larger;">
+                    <li>Where did you go?</li>
+                    <li>Who did you meet?</li>
+                    <li>What did you do?</li>
+                    <li>What did you eat?</li>
+                    <li>What was your favorite part of the weekend?</li>
+                  </ul>  -->
+            </div><hr>
+
+
+            <h3 style="color: rgb(10, 20, 204);">Before you submit your paper CHECK the following:</h3>
+            
+            <div class="checklist-container">
+                <div class="checklist-column">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item1">
+                        <label for="item1">You wrote more than 10 sentences.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item2">
+                        <label for="item2">Sentences start with a capital letter & ends with a full stop.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item3">
+                        <label for="item3">Every sentence has a subject/noun & a verb.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item4">
+                        <label for="item4">Your sentence has <span style="text-decoration: underline;">correct</span> word order.</label>
+                    </div>
+                </div>
+                <div class="checklist-column">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item5">
+                        <label for="item5">You chose ONE topic ONLY.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item6">
+                        <label for="item6">You covered all the details.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item7">
+                        <label for="item7">Your handwriting is clear.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item8">
+                        <label for="item8">You have an introduction, body & conclusion.</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <br>
+        
+
+            <button type="button" onclick="submitQuiz()">Finish and exit.</button>
+        </form>
+    </div>
+
+    <div id="result" style="display: none;">
+        <h2>ELECT Writing Quiz 3 done.</h2>
+        <h2>Submit your work to your teacher or to the proctor.</h2>
+        <p id="score"></p>
+    </div>
+
+    <!-- <div id="close" style="display: none;">
+        <h2>The quiz has been closed due to minimized page or another opened tab.</h2>
+        <p id="score"></p>
+    </div> -->
+
+    <script src="script.js"></script>
+</body>
+</html>

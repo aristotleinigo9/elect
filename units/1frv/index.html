@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECT Final Reading and Vocabulary Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div id="user-info">
+        <h2>ELECT Final Reading and Vocabulary Section</h2>
+        <h3>Time: 50 minutes</h3>
+        <h2>Enter Your Information</h2>
+        <form id="info-form">
+            <label for="name">Name: <input type="text" id="name" style="margin-left: 51px;"> </label>
+            <br>
+            <label for="id">Badge: <input type="text" id="id" style="margin-left: 47px;" required></label>
+            <br>
+            <label for="password">Password: <input type="password" id="password" style="margin-left: 20px;" required></label>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="button" onclick="startQuiz()">Start Test</button>
+        </form>
+    </div>
+
+    <div id="quiz" style="display: none;">
+        <h2>ELECT Final Reading and Vocabulary Section</h2>
+        <div id="user-info-display"></div>
+        <p id="timer">Time left: <span id="countdown"></span></p>
+        <hr>
+        <form id="quiz-form">
+            <h3>Choose the best answer for each question.</h3>
+            <p class="warning" style="color: red;">Do not open new tabs or minimize the screen during the test. Test will terminate/freeze and your answers may not be saved. You may also get zero.</p>
+            <h3>READING</h3>
+            <div class="question">
+                <p> 
+                    <p style = 'color:green'> Passage 1 </p>
+                    <hr><p style ='text-align: center'> Google </p> <hr>
+                    
+                        <p style = 'text-align:justify'>
+                            You know that you're doing something big when your company name becomes a verb. Ask Xerox. In 1959 they created the first plain paper copy machine. It was one of the most successful products ever. The company name Xerox grew into a verb that means "to copy," as in "Bob, can you Xerox this for me?" Around 50 years later, the same thing happened to Google. Their company name grew into a verb that means "to do an internet search." Now everyone and their grandma knows what it means to Google it.
+                    
+                        <p style = 'text-align:justify'> 
+                            Unlike Xerox, Google wasn't the first company to invent their product, not by a long shot. Lycos released their search engine in 1993. Yahoo! came out in 1994. AltaVista began serving results in 1995. Google did not come out until years later, in 1998. Though a few years difference may not seem like much, this is a major head start in the fast-moving world of tech. So how did Google do it? How did they overtake their competitors who had such huge leads in time and money? Maybe one good idea made all the difference.
+                   
+                        <p style = 'text-align:justify'>
+                            There are millions and millions of sites on the internet. How does a search engine know which ones are relevant to your search? This is a question that great minds have been working on for decades. To understand how Google changed the game, you need to know how search engines worked in 1998. Back then most websites looked at the words in your query. They counted how many times those words appeared on each page. Then they might return pages where the words in your query appeared the most. This system did not work well and people often had to click through pages and pages of results to find what they wanted.
+                    
+                        <p style = 'text-align:justify'>
+                            Google was the first search engine that began considering links. Links are those blue underlined words that take you to other pages when you click on them. Larry Page, cofounder of Google, believed that meaningful data could be drawn from how those links connect. Page figured that websites with many links pointing at them were more important than those that had few. He was right. Google's search results were much better than their rivals. They would soon become the world's most used search engine.
+                        
+                        <p style = 'text-align:justify'> 
+                            It wasn't just the great search results that led to Google becoming so well liked. It also had to do with the way that they presented their product. Most of the other search engines were cluttered. Their home pages were filled with everything from news stories to stock quotes. But Google's homepage was, and still is, clean. There's nothing on it but the logo, the search box, and a few links. It almost appears empty. In fact, when they were first testing it, users would wait at the home page and not do anything. When asked why, they said that they were, "waiting for the rest of the page to load." People couldn't imagine such a clean and open page as being complete. But the fresh design grew on people once they got used to it.
+                        
+                        <p style = 'text-align:justify'> 
+                            These days Google has its hands in everything from self-driving cars to helping humans live longer. Though they have many other popular products, they will always be best known for their search engine. The Google search engine has changed our lives and our language. Not only is it a fantastic product, it is a standing example that one good idea (and a lot of hard work) can change the world.
+                    
+                        <p style = 'text-align:justify'><br> 
+                        1.Which event happened last?</p>
+                <label><input type="radio" name="q1" value="a"> Lycos released their search engine.</label>
+                <label><input type="radio" name="q1" value="b"> Yahoo! released their search engine.</label>
+                <label><input type="radio" name="q1" value="c"> Google released their search engine.</label>
+                <label><input type="radio" name="q1" value="d"> Xerox released their copy machine.</label>
+            </div><br>
+
+            <div class="question">
+                <p>2. Which statement would the author of this text most likely disagree with?</p>
+                <label><input type="radio" name="q2" value="a"> Part of Google's success is due to the design of their homepage.</label>
+                <label><input type="radio" name="q2" value="b"> Google succeeded by following examples of others in their field.</label>
+                <label><input type="radio" name="q2" value="c"> Google wasn't the first search engine, but it was the best.</label>
+                <label><input type="radio" name="q2" value="d"> Google's success may not have been possible without Larry Page.</label>
+            </div><br>
+
+            <!-- Add more questions here -->
+            <div class="question">
+                <p>3. Which best expresses the main idea of the third paragraph?</p>
+                <label><input type="radio" name="q3" value="a"> There are lots and lots of websites connected to the internet.</label>
+                <label><input type="radio" name="q3" value="b"> Google created a better way to organize search results.</label>
+                <label><input type="radio" name="q3" value="c"> Many smart people have worked on search engines over the years.</label>
+                <label><input type="radio" name="q3" value="d"> Older search engines used unreliable methods to order results.</label>
+            </div><br>
+
+            <div class="question">
+                <p>4. What is the author's main purpose in writing this article?</p>
+                <label><input type="radio" name="q4" value="a"> To explain how Google overtook its rivals</label>
+                <label><input type="radio" name="q4" value="b"> To compare and contrast Google and Xerox</label>
+                <label><input type="radio" name="q4" value="c"> To persuade readers to use Google for internet searches</label>
+                <label><input type="radio" name="q4" value="d"> To discuss how companies can influence language over time</label>
+            </div><br>
+
+            <div class="question">
+                <p>5. Which statement would the author most likely agree with?</p>
+                <label><input type="radio" name="q5" value="a"> Google became successful because its founders were well-connected.</label>
+                <label><input type="radio" name="q5" value="b"> Google was the world's first and best search engine.</label>
+                <label><input type="radio" name="q5" value="c"> Google changed the world by solving an old problem in a new way.</label>
+                <label><input type="radio" name="q5" value="d"> Google's other products are now more important to its success than search.</label>
+            </div><br>
+
+            <div class="question">
+                <p>6. Which best expresses the main idea of the fourth paragraph?</p>
+                <label><input type="radio" name="q6" value="a"> Links allow people to surf from one website to the next.</label>
+                <label><input type="radio" name="q6" value="b"> Larry Page's ideas about links helped Google get to the top.</label>
+                <label><input type="radio" name="q6" value="c"> Larry Page contributed to the internet by inventing the link.</label>
+                <label><input type="radio" name="q6" value="d"> Google is a website that serves important links to users.</label>
+            </div><br>
+
+            <div class="question">
+                <p> 
+                    <p style = 'color:blue'> Passage 2 </p>
+                    <hr><p style ='text-align: center'> Tetris </p><hr> 
+                    
+                        <p style = 'text-align:justify'>
+                            <table class="table-container">
+                                <tr>
+                                    <th style="font-weight: normal;">Do you like video games? Lots of people do. There are many types of video games. Some people like action games. Other people like driving games. But the most popular game of all time is a puzzle game.</th>
+                                   
+                                    <th><img src='images/tetris.png' width='150' height='135'></th>
+                                </tr>
+                            </table>
+                        
+                        <p style = 'text-align:justify'> 
+                                Tetris is a game about making lines. Blocks fall from the top of the screen. They fall one at a time. The player moves the blocks. Once the blocks hit the bottom, they are locked in place. Players try to make lines go across the screen with no gaps. Complete lines disappear. This gives players more room. The blocks pile up during the game. The game ends when the blocks get to the top of the screen.
+        
+                        <p style = 'text-align:justify'>
+                            A man named Alexey made Tetris in 1984. All the pieces in Tetris have four blocks. The word "tetra" means four. Alexey named his game after tetra and tennis. He made Tetris while working at a science academy in Moscow. Moscow is in Russia.
+                    
+                        <p style = 'text-align:justify'>
+                            Alexey made his game on a screen that only showed letters. He could not use blocks. The blocks were made out of letters in the first game of Tetris. Still, all Alexey's friends loved his game. It was easy to learn and fun to play.
+                        
+                        <p style = 'text-align:justify'> 
+                            Soon the game spread across the world. It was on every computer. It was in arcades. It came with every one of Nintendo's Game Boy. More than 100 million Game Boys were sold. Tetris was all over the place. Even today Tetris comes with many phones. 
+                        
+                        <p style = 'text-align:justify'> 
+                            Dr. Richard Haier has studied Tetris players. He ran many tests. He found that playing Tetris boosts mental activity. Dr. Haier thinks Tetris is good for the brain. I agree with this finding. Now go and play some Tetris. It's just what the doctor ordered.
+                    
+                        <p style = 'text-align:justify'><br> 
+                        1. What is this article about?</p>
+                <label><input type="radio" name="q7" value="a"> Video games</label>
+                <label><input type="radio" name="q7" value="b"> Tetris</label>
+                <label><input type="radio" name="q7" value="c"> Alexey</label>
+                <label><input type="radio" name="q7" value="d"> Blocks</label>
+            </div><br>
+
+
+            <div class="question">
+                <p>2. What is the goal of Tetris?</p>
+                <label><input type="radio" name="q8" value="a"> To make tall piles of blocks</label>
+                <label><input type="radio" name="q8" value="b"> To match the colors of blocks</label>
+                <label><input type="radio" name="q8" value="c"> To make complete lines</label>
+                <label><input type="radio" name="q8" value="d"> To get blocks to the top of the screen</label>
+            </div><br>
+
+            <div class="question">
+                <p>3. After which is Tetris named?.</p>
+                <label><input type="radio" name="q9" value="a"> fish</label>
+                <label><input type="radio" name="q9" value="b"> the number ten</label>
+                <label><input type="radio" name="q9" value="c"> Paris</label>
+                <label><input type="radio" name="q9" value="d"> tennis</label>
+            </div><br>
+
+            <div class="question">
+                <p>4. Where was Alexey when he created Tetris?</p>
+                <label><input type="radio" name="q10" value="a"> Paris</label>
+                <label><input type="radio" name="q10" value="b"> Russia</label>
+                <label><input type="radio" name="q10" value="c"> The United States of America</label>
+                <label><input type="radio" name="q10" value="d"> Germany</label>
+            </div><br>
+
+            <div class="question">
+                <p>5. What is the highest selling game of all time?</p>
+                <label><input type="radio" name="q11" value="a"> A driving game </label>
+                <label><input type="radio" name="q11" value="b"> Call of Duty</label>
+                <label><input type="radio" name="q11" value="c"> Tetris</label>
+                <label><input type="radio" name="q11" value="d"> An action game</label>
+            </div><br>
+
+            <div class="question">
+                <p>6. Which event happened first?</p>
+                <label><input type="radio" name="q12" value="a"> Tetris was played with letters instead of blocks </label>
+                <label><input type="radio" name="q12" value="b"> Tetris was released on the phone</label>
+                <label><input type="radio" name="q12" value="c"> Tetris was released in the arcade</label>
+                <label><input type="radio" name="q12" value="d"> Tetris was brought to the Game Boy</label>
+            </div><br>
+
+            <div class="question">
+                <p><h3 style ='text-align: left'> VOCABULARY</h3><br> 1. Aramco Dharan ITC campus is big. It has many _________.</p>
+                <label><input type="radio" name="q13" value="a"> manager</label>
+                <label><input type="radio" name="q13" value="b"> facilities</label>
+                <label><input type="radio" name="q13" value="c"> clearance</label>
+                <label><input type="radio" name="q13" value="d"> historic</label>
+            </div><br>
+
+            <div class="question">
+                <p>2. Al Masmak is a _______ place in Saudia Arabia. King Abdulaziz Al-Saud lived there.</p>
+                <label><input type="radio" name="q14" value="a"> historic</label>
+                <label><input type="radio" name="q14" value="b"> expensive</label>
+                <label><input type="radio" name="q14" value="c"> closed</label>
+                <label><input type="radio" name="q14" value="d"> dangerous</label>
+            </div><br>
+
+            <div class="question">
+                <p>3. Have you been to Ithraa? The building has a ____________ design.</p>
+                <label><input type="radio" name="q15" value="a"> single</label>
+                <label><input type="radio" name="q15" value="b"> season</label>
+                <label><input type="radio" name="q15" value="c"> complex</label>
+                <label><input type="radio" name="q15" value="d"> invention</label>
+            </div><br>
+
+            <div class="question">
+                <p>4. We all want our children to be _______ , but we want them to have their own opinion too.</p>
+                <label><input type="radio" name="q16" value="a"> affection</label>
+                <label><input type="radio" name="q16" value="b"> obedient</label>
+                <label><input type="radio" name="q16" value="c"> plenty</label>
+                <label><input type="radio" name="q16" value="d"> costly</label>
+            </div><br>
+
+            <div class="question">
+                <p>5. Hilton hotels are very __________ , I enjoy their beautiful design.</p>
+                <label><input type="radio" name="q17" value="a"> offer</label>
+                <label><input type="radio" name="q17" value="b"> effective</label>
+                <label><input type="radio" name="q17" value="c"> luxurious</label>
+                <label><input type="radio" name="q17" value="d"> scary</label>
+            </div><br>
+
+
+            <div class="question">
+                <p>6. Video games today have a lot of  ____ , we should not allow children to play them.</p>
+                <label><input type="radio" name="q18" value="a"> violence</label>
+                <label><input type="radio" name="q18" value="b"> series</label>
+                <label><input type="radio" name="q18" value="c"> publicity</label>
+                <label><input type="radio" name="q18" value="d"> whales</label>
+            </div><br>
+
+            <div class="question">
+                <p>7. Some people ____ that the earth is flat, but scientists disagree.</p>
+                <label><input type="radio" name="q19" value="a"> claime</label>
+                <label><input type="radio" name="q19" value="b"> claim</label>
+                <label><input type="radio" name="q19" value="c"> claims</label>
+                <label><input type="radio" name="q19" value="d"> clam</label>
+            </div><br>
+
+            <div class="question">
+                <p>8. Poor people are ________, they have nothing to eat while others through food in the garbage.</p>
+                <label><input type="radio" name="q20" value="a"> urgent</label>
+                <label><input type="radio" name="q20" value="b"> approaching</label>
+                <label><input type="radio" name="q20" value="c"> starving</label>
+                <label><input type="radio" name="q20" value="d"> never</label>
+            </div><br>
+
+            <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+    </div>
+
+    <div id="result" style="display: none;">
+        <h2>Final Score</h2>
+        <p id="score"></p>
+        <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <div id="close" style="display: none;">
+        <h3 style="text-indent: 20px;">The test has been closed due to minimized page, another opened tab or user submitted the test. If user submitted the test, the score should be shown.</h3>
+        <p id="score"></p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECT Reading Quiz 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div id="user-info">
+        <h2>ELECT Reading Quiz 2</h2>
+        <h3>Time: 50 minutes</h3>
+        <h2>Enter Your Information</h2>
+        <form id="info-form">
+            <label for="name">Name: <input type="text" id="name" style="margin-left: 51px;"> </label>
+            <br>
+            <label for="id">Badge: <input type="text" id="id" style="margin-left: 47px;" required></label>
+            <br>
+            <label for="password">Password: <input type="password" id="password" style="margin-left: 20px;" required></label>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="button" onclick="startQuiz()">Start Quiz</button>
+        </form>
+    </div>
+
+    <div id="quiz" style="display: none;">
+        <h2>ELECT Reading Quiz 2</h2>
+        <div id="user-info-display"></div>
+        <p id="timer">Time left: <span id="countdown"></span></p>
+        <hr>
+        <form id="quiz-form">
+            <h3>Read the following passage. Then answer the questions.</h3>
+            <p class="warning" style="color: red;">Do not open new tabs or minimize the screen during the quiz. Quiz will terminate/freeze and your answers may not be saved. You may also get zero.</p>
+
+            <hr><h3 style = 'color:green; text-align: center; '>The Incredible Machine</h3><hr>
+            <p style = 'text-align:justify'>
+                <table class="table-container">
+                    <tr>
+                        <th style="font-weight: normal;">Everyone has a favorite attraction at an amusement park, and I am no different. However, unlike most people who seem to prefer rollercoasters, my favorite ride is a little more gentle. Every time I go to Coney Island, Navy Pier, or the Santa Monica Pier, I absolutely have to ride the Ferris wheel. The Ferris wheel is simple and yet also quite complex. That is, riding it is easy, but how it works is complicated. A series of carts are attached to a wheel, which is attached to a rim. That rim rotates vertically around an axis, and gravity keeps the carts upright. As simple as the ride seems, only advanced engineers can make safe and fun Ferris wheels.</th>
+                        <th><img src='images/ferris.jpg' width='300' height='270'></th>
+                    </tr>
+                </table>
+            
+            <p style = 'text-align:justify'> 
+                While the Ferris wheel is not as thrilling as a rollercoaster, it is still very exciting. The fact of being high in the air makes it so much more entertaining than a lot of rides. I mean, how often do you hang from that high up in daily life? Nevertheless, I have to admit, I don’t seek Ferris wheels out because of their excitement. Rather, I find them very relaxing. At the top of the Ferris wheel, you get beautiful sights of the park. You also get a sense of calm that you don’t get in the hustle and bustle of the park below. Additionally, Ferris wheels are also gorgeous to look at when they are lit up at night. In fact, the original Ferris wheel was designed as much to be seen as to be ridden.
+       
+            <p style = 'text-align:justify'>
+                The first Ferris wheel was made by and named after George Washington Gale Ferris, Jr. He designed it for the Chicago World’s Fair in 1893. It was the tallest attraction there, standing 264 feet high. However, visitors to the fair were impressed by the size of the ride as well as the mechanics of it. In 1893, anything that was not turned by hand was considered a sight to see. And the wheel, which was a machine, was truly incredible to see. Further, as one visitor put it, the wheel was amazing because it seemed to be missing support. That is, it did not look like it could stand on its own. And yet it did and even rotated!
+        
+            <p style = 'text-align:justify'>
+                Ferris wheel technology has only improved since then. Most of today’s Ferris wheels are much larger than that first one. The largest in the world is the "Singapore Flyer," which stands slightly taller than twice what Ferris’s did! Today, the Ferris wheel is the most common amusement park ride. But that does not mean you should take them for granted. Instead, be thankful for Ferris’ invention. The next time you’re at an amusement park, don’t just look up at the impressive wheel in the sky on your way to a newer attraction. Take it for a spin!          
+            <p style = 'text-align:justify'><br> 
+
+            <!-- <div style = 'text-align:center'><img src='images/camels.png' width='700' height='270' ></div> -->
+            <br>
+            <h4>Answer the following questions about “The Incredible Machine”.</h4>
+            <div class="question">
+                1. This passage was most likely written to:</p>
+                <label><input type="radio" name="q1" value="a"> Describe the author’s favorite book about amusement parks.</label>
+                <label><input type="radio" name="q1" value="b"> Explain the original design of Ferris wheels and how they work today.</label>
+                <label><input type="radio" name="q1" value="c"> Describe the history of Ferris wheels and why they are so dangerous.</label>
+                <label><input type="radio" name="q1" value="d"> Explain the history of Ferris wheels and why the author likes them.</label>
+            </div><br>
+
+            <div class="question">
+                <p>2. It can be understood that Coney Island, Navy Pier, and the Santa Monica Pier are all examples of:</p>
+                <label><input type="radio" name="q2" value="a"> amusement parks</label>
+                <label><input type="radio" name="q2" value="b"> Ferris wheels</label>
+                <label><input type="radio" name="q2" value="c"> vacation spots</label>
+                <label><input type="radio" name="q2" value="d"> boat docks</label>
+            </div><br>
+
+            <div class="question">
+                <p>3. As used in paragraph 1, the word amusement park means:</p>
+                <label><input type="radio" name="q3" value="a"> Big park with natural surroundings</label>
+                <label><input type="radio" name="q3" value="b"> Big park with fun activities</label>
+                <label><input type="radio" name="q3" value="c"> Big park for endangered animals</label>
+                <label><input type="radio" name="q3" value="d"> Big park for a gated community</label>
+            </div><br>
+
+            <div class="question">
+                <p>4. As used in paragraph 2, which is the best antonym for complex?</p>
+                <label><input type="radio" name="q4" value="a"> Impressive</label>
+                <label><input type="radio" name="q4" value="b"> Beautiful</label>
+                <label><input type="radio" name="q4" value="c"> Exciting</label>
+                <label><input type="radio" name="q4" value="d"> Simple</label>
+            </div><br>
+
+            <div class="question">
+                <p>5. What does the author like best about Ferris wheels?</p>
+                <label><input type="radio" name="q5" value="a"> the impressive engineering and beauty of them</label>
+                <label><input type="radio" name="q5" value="b"> the excitement and thrills they guarantee</label>
+                <label><input type="radio" name="q5" value="c"> the beautiful sights and relaxation they allow</label>
+                <label><input type="radio" name="q5" value="d"> the fact that most amusement parks have one</label>
+            </div><br>
+
+            <div class="question">
+                <p>6. According to the passage, the Ferris wheel was originally designed for:</p>
+                <label><input type="radio" name="q6" value="a"> Coney Island</label>
+                <label><input type="radio" name="q6" value="b"> The world’s fair</label>
+                <label><input type="radio" name="q6" value="c"> Disneyworld</label>
+                <label><input type="radio" name="q6" value="d"> Singapore</label>
+            </div><br>
+
+            <div class="question">
+               
+                7. Using information in the passage, the reader can understand that the tallest Ferris wheel in the world is:</p>
+                <label><input type="radio" name="q7" value="a"> Under 250 feet tall</label>
+                <label><input type="radio" name="q7" value="b"> Between 250 and 500 feet tall</label>
+                <label><input type="radio" name="q7" value="c"> Between 500 and 750 feet tall</label>
+                <label><input type="radio" name="q7" value="d"> Over 750 feet tall</label>
+            </div><br>
+
+
+            <div class="question">
+                <p>8. Which sentence DOES NOT express an opinion:</p>
+                <label><input type="radio" name="q8" value="a"> I find them very relaxing.</label>
+                <label><input type="radio" name="q8" value="b"> Ferris wheels are also gorgeous to look at.</label>
+                <label><input type="radio" name="q8" value="c"> The first Ferris wheel was made by and named after George Washington Gale Ferris.</label>
+                <label><input type="radio" name="q8" value="d"> While the Ferris wheel is not as thrilling as a rollercoaster, it is still very exciting.</label>
+            </div><br>
+            <hr>
+
+            <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+    </div>
+
+    <div id="result" style="display: none;">
+        <h2>Final Score</h2>
+        <p id="score"></p>
+        <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
